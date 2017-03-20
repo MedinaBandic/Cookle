@@ -11,12 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- =======================================================
-        Theme Name: Delicious
-        Theme URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
-        Author: BootstrapMade.com
-        Author URL: https://bootstrapmade.com
-    ======================================================= -->
+
   </head>
   <body>
     <!--banner-->
@@ -27,9 +22,12 @@
                 <div id="mySidenav" class="sidenav">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                   <a href="#about">About</a>
-                  <a href="#event">Event</a>
-                  <a href="#menu-list">Menu</a>
-                  <a href="#contact">Book a table</a>
+                  <a href="#event">Recipe of day</a>
+                  <a href="#menu-list">Cookle</a>
+                  <a href="#contact">Register</a>
+                  <a href="#login">Login</a>
+
+
                 </div>
                 <!-- Use any element to open the sidenav -->
                 <span onclick="openNav()" class="pull-right menu-icon">☰</span>
@@ -39,8 +37,8 @@
         <div class="row">
           <div class="inner text-center">
             <h1 class="logo-name">Cookle</h1>
-            <h2>Food To fit your lifestyle & health.</h2>
-            <p>Specialized in Indian Cuisine!!</p>
+            <h2>Become your own chef!</h2>
+            <p>Over 100 ideas and recipes!</p>
           </div>
         </div>
         </div>
@@ -52,22 +50,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center marb-35">
-                    <h1 class="header-h">Delicious Journey</h1>
-                    <p class="header-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                    <br>nibh euismod tincidunt ut laoreet dolore magna aliquam. </p>
+                    <h1 class="header-h">Start The Delicious Journey</h1>
+
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                     <div class="col-md-6 col-sm-6">
                         <div class="about-info">
-                            <h2 class="heading">vel illum qui dolorem eum</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero impedit inventore culpa vero accusamus in nostrum dignissimos modi, molestiae. Autem iusto esse necessitatibus ex corporis earum quaerat voluptates quibusdam dicta!</p>
+                            <h2 class="heading">Cookle your own meal!</h2>
+                            <p>You are sick of the unhealthy food bought outside? You need idea for the lunch today? You don't know how to cook? Cookle is the perfect place for you! Here you can find everything you need including:</p>
                             <div class="details-list">
                                 <ul>
-                                    <li><i class="fa fa-check"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                                    <li><i class="fa fa-check"></i>Quisque finibus eu lorem quis elementum</li>
-                                    <li><i class="fa fa-check"></i>Vivamus accumsan porttitor justo sed </li>
-                                    <li><i class="fa fa-check"></i>Curabitur at massa id tortor fermentum luctus</li>
+                                    <li><i class="fa fa-check"></i>Suggestions of the perfect meals for you based on categories, ingredients and your own wishes</li>
+                                    <li><i class="fa fa-check"></i>Hundreds of ideas and recipes</li>
+                                    <li><i class="fa fa-check"></i>Rating and reviews</li>
+                                    <li><i class="fa fa-check"></i>Food order and delivery</li>
+                                    <li><i class="fa fa-check"></i>And much more...</li>
                                 </ul>
                             </div>
                         </div>
@@ -87,8 +85,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 text-center" style="padding:60px;">
-                      <h1 class="header-h">Up Coming events</h1>
-                      <p class="header-p">Decorations 100% complete here</p>
+                      <h1 class="header-h">Recipe of the day</h1>
                     </div>
                     <div class="col-md-12" style="padding-bottom:60px;">
                         <div class="item active left">
@@ -98,15 +95,27 @@
                          <div class="col-md-6 col-sm-6 details-text">
                           <div class="content-holder">
                             <h2>Joyful party</h2>
+
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eos suscipit earum voluptas aliquam recusandae, quae iure adipisci, inventore quia, quos delectus quaerat praesentium id expedita nihil illo accusantium, tempora.</p>
-                            <address>
-                              <strong>Place: </strong>
-                              1612 Collins Str, Victoria 8007
-                              <br>
-                              <strong>Time: </strong>
-                              07:30pm
-                            </address>
-                            <a class="btn btn-imfo btn-read-more" href="events-details.html">Read more</a>
+
+                            <a class="btn btn-imfo btn-read-more" data-toggle="collapse" data-target="#demo">Read more</a>
+                            <div id="demo" class="collapse">
+                                <h3>Recipe</h3>
+                                <div class="details-list">
+                                    <ul>
+                                        <li><i class="fa fa-check"></i>Ingredient 1</li>
+                                        <li><i class="fa fa-check"></i>Ingredient 2</li>
+                                        <li><i class="fa fa-check"></i>Ingredient 3</li>
+                                        <li><i class="fa fa-check"></i>Ingredient 4</li>
+                                        <li><i class="fa fa-check"></i>Ingredient 5</li>
+                                    </ul>
+                                </div>
+                                <h3>How to make?</h3>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eos suscipit earum voluptas aliquam recusandae, quae iure adipisci, inventore quia, quos delectus quaerat praesentium id expedita nihil illo accusantium, tempora.</p>
+                            </div>
+
+
                           </div>
                         </div>
                       </div>
@@ -121,19 +130,100 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center marb-35">
-                    <h1 class="header-h">Menu List</h1>
+                    <h1 class="header-h">Cookle the perfect recipe</h1>
                     <p class="header-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
                     <br>nibh euismod tincidunt ut laoreet dolore magna aliquam. </p>
                 </div>
                 <div class="col-md-12  text-center gallery-trigger">
                     <ul>
-                        <li><a class="filter" data-filter="all">Show All</a></li>
+                        <li><a class="filter" data-filter="all">Show all</a></li>
+                        <li><a class="filter" data-filter=".category-3">Most popular</a></li>
                         <li><a class="filter" data-filter=".category-1">Breakfast</a></li>
                         <li><a class="filter" data-filter=".category-2">Lunch</a></li>
                         <li><a class="filter" data-filter=".category-3">Dinner</a></li>
+                        <li><a class="filter" data-filter=".category-3">Snack</a></li>
+                        <li><a class="filter" data-filter=".category-3">Dessert</a></li>
+                        <li><a class="filter" data-filter=".category-3">Barbeque</a></li>
+                        <li><a class="filter" data-filter=".category-3">Vegetarian</a></li>
+
                     </ul>
                 </div>
                 <div id="Container">
+
+                        <!-- SWAP THIS WITH LIST ITEMS -->
+                        <!-- <% for(var i=0; i<10; i++) {%>
+                           <div class="thumbnail category-<%= i %>" data-myorder="2">
+                              <img src="img/res01.jpg" alt="">
+                              <div class="caption">
+                                <h3>Food Item Name</h3>
+                                <p><a class="btn btn-primary" role="button">Read more</a>
+                              </div>
+                            </div>
+                        <% } %> -->
+
+                    <div class="row">
+                      <div class="mix category-1 col-sm-6 col-md-4">
+                        <div class="thumbnail" data-myorder="2">
+                          <img src="img/res01.jpg" alt="">
+                          <div class="caption">
+                            <h3>Food Item Name</h3>
+                            <p><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mix category-1 col-sm-6 col-md-4">
+                        <div class="thumbnail" data-myorder="2">
+                          <img src="img/res01.jpg" alt="">
+                          <div class="caption">
+                            <h3>Food Item Name</h3>
+                            <p><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mix category-2 col-sm-6 col-md-4">
+                        <div class="thumbnail" data-myorder="2">
+                          <img src="img/res01.jpg" alt="">
+                          <div class="caption">
+                            <h3>Food Item Name</h3>
+                            <p><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mix category-2 col-sm-6 col-md-4">
+                        <div class="thumbnail" data-myorder="2">
+                          <img src="img/res01.jpg" alt="">
+                          <div class="caption">
+                            <h3>Food Item Name</h3>
+                            <p><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mix category-3 col-sm-6 col-md-4">
+                        <div class="thumbnail" data-myorder="2">
+                          <img src="img/res01.jpg" alt="">
+                          <div class="caption">
+                            <h3>Food Item Name</h3>
+                            <p><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mix category-3 col-sm-6 col-md-4">
+                        <div class="thumbnail" data-myorder="2">
+                          <img src="img/res01.jpg" alt="">
+                          <div class="caption">
+                            <h3>Food Item Name</h3>
+                            <p><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal" >Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+<!--
                     <div class="mix category-1 menu-restaurant" data-myorder="2">
                         <span class="clearfix">
                         <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
@@ -229,7 +319,7 @@
                         <span class="menu-price">$20.99</span>
                       </span>
                       <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -240,38 +330,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="header-h">Book Your table</h1>
-                    <p class="header-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                    <br>nibh euismod tincidunt ut laoreet dolore magna aliquam. </p>
+                    <h1 class="header-h">Register</h1>
                 </div>
             </div>
             <div class="row msg-row">
                 <div class="col-md-4 col-sm-4 mr-15">
                     <div class="media-2">
                         <div class="media-left">
-                            <div class="contact-phone bg-1 text-center"><span class="phone-in-talk fa fa-phone"></span></div>
                         </div>
                         <div class="media-body">
-                            <h4 class="dark-blue regular">Phone Numbers</h4>
-                            <p class="light-blue regular alt-p">+440 875369208 - <span class="contacts-sp">Phone Booking</span></p>
+
                         </div>
                     </div>
                     <div class="media-2">
                         <div class="media-left">
-                            <div class="contact-email bg-14 text-center"><span class="hour-icon fa fa-clock-o"></span></div>
                         </div>
                         <div class="media-body">
-                            <h4 class="dark-blue regular">Opening Hours</h4>
-                            <p class="light-blue regular alt-p"> Monday to Friday 09.00 - 24:00</p>
-                            <p class="light-blue regular alt-p">
-                                 Friday and Sunday 08:00 - 03.00
-                            </p>
+
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 col-sm-8">
+                <div class="col-md-12 col-sm-12">
                     <form action="" method="post" role="form" class="contactForm">
-                    <div id="sendmessage">Your booking request has been sent. Thank you!</div>
+                    <div id="sendmessage">Registration complete!</div>
                     <div id="errormessage"></div>
                     <div class="col-md-6 col-sm-6 contact-form pad-form">
                         <div class="form-group label-floating is-empty">
@@ -282,8 +363,8 @@
                     </div>
                     <div class="col-md-6 col-sm-6 contact-form">
                         <div class="form-group">
-                            <input type="date" class="form-control label-floating is-empty" name="date" id="date" placeholder="Date" data-rule="required" data-msg="This field is required" />
-                            <div class="validation"></div>
+                          <input type="password" class="form-control label-floating is-empty" name="password" id="password" placeholder="Password" data-rule="required" data-msg="This field is required" />
+                          <div class="validation"></div>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6 contact-form pad-form">
@@ -294,34 +375,78 @@
                     </div>
                     <div class="col-md-6 col-sm-6 contact-form">
                         <div class="form-group">
-                            <input type="time" class="form-control label-floating is-empty" name="time" id="time" placeholder="Time" data-rule="required" data-msg="This field is required" />
-                            <div class="validation"></div>
+                          <input type="text" class="form-control label-floating is-empty" name="phone" id="phone" placeholder="Phone" data-rule="required" data-msg="This field is required" />
+                          <div class="validation"></div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-6 contact-form">
-                        <div class="form-group">
-                            <input type="text" class="form-control label-floating is-empty" name="phone" id="phone" placeholder="Phone" data-rule="required" data-msg="This field is required" />
-                            <div class="validation"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 contact-form">
-                        <div class="form-group">
-                            <input type="text" class="form-control label-floating is-empty" name="people" id="people" placeholder="People" data-rule="required" data-msg="This field is required" />
-                            <div class="validation"></div>
-                        </div>
-                    </div>
+
                     <div class="col-md-12 contact-form">
                         <div class="form-group label-floating is-empty">
-                            <textarea class="form-control" name="message" rows="5" rows="3" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <textarea class="form-control" name="adress" rows="5" rows="3" data-rule="required" data-msg="Please write something for us" placeholder="Address"></textarea>
                             <div class="validation"></div>
                         </div>
 
                     </div>
                     <div class="col-md-12 btnpad">
                         <div class="contacts-btn-pad">
-                            <button class="contacts-btn">Book Table</button>
+                            <button class="contacts-btn">Register</button>
                         </div>
                     </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="login" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="header-h">Log in</h1>
+                </div>
+            </div>
+            <div class="row msg-row">
+                <div class="col-md-4 col-sm-4 mr-15">
+                    <div class="media-2">
+                        <div class="media-left">
+                        </div>
+                        <div class="media-body">
+
+                        </div>
+                    </div>
+                    <div class="media-2">
+                        <div class="media-left">
+                        </div>
+                        <div class="media-body">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <form action="" method="post" role="form" class="contactForm">
+                    <div id="sendmessage">Logged in!</div>
+                    <div id="errormessage"></div>
+
+                    <div class="col-md-6 col-sm-6 contact-form pad-form">
+                        <div class="form-group">
+                            <input type="email" class="form-control label-floating is-empty" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <div class="form-group">
+                          <input type="password" class="form-control label-floating is-empty" name="password" id="password" placeholder="Password" data-rule="required" data-msg="This field is required" />
+                          <div class="validation"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12 btnpad">
+                        <div class="contacts-btn-pad">
+                            <button class="contacts-btn">Log in</button>
+                        </div>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+
                     </form>
                 </div>
             </div>
@@ -334,22 +459,27 @@
             <div class="row">
                 <div class="col-md-offset-3 col-md-6 text-center">
                     <div class="widget">
-                        <h4 class="widget-title">Delicious</h4>
-                        <address>324 Ellte Road<br>Delhi, DL 110013</address>
-                        <div class="social-list">
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </div>
-                        <p class="copyright clear-float">
-                            © Delicious Theme. All Rights Reserved
-                            <div class="credits">
-                                <!--
-                                    All the links in the footer should remain intact.
-                                    You can delete the links only if you purchased the pro version.
-                                    Licensing information: https://bootstrapmade.com/license/
-                                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Delicious
-                                -->
-                                Designed by <a href="https://bootstrapmade.com/">Free Bootstrap Themes</a>
+                      <div class="media-2">
+                          <div class="media-left">
+                              <div class="contact-phone bg-1 text-center"><span class="phone-in-talk fa fa-phone"></span></div>
+                          </div>
+                          <div class="media-body">
+                              <h4 class="dark-blue regular">Order the Groceries</h4>
+                              <p class="light-blue regular alt-p">+440 875369208 - <span class="contacts-sp">Bingo.d.o.o</span></p>
+                              <p class="light-blue regular alt-p">+440 123456789 - <span class="contacts-sp">Amko d.o.o</span></p>
+                          </div>
+                      </div>
+                      <div class="media-2">
+                          <div class="media-left">
+                              <div class="contact-email bg-14 text-center"><span class="hour-icon fa fa-clock-o"></span></div>
+                          </div>
+                          <div class="media-body">
+                              <h4 class="dark-blue regular">Ordering Hours</h4>
+                              <p class="light-blue regular alt-p"> Monday to Friday 09.00 - 19:00</p>
+                              <p class="light-blue regular alt-p">
+                                   Saturday and Sunday 09:00 - 15.00
+                              </p>
+                          </div>
                             </div>
                         </p>
                     </div>
@@ -358,7 +488,22 @@
         </div>
     </footer>
     <!-- / footer -->
-
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">How to prepare</h4>
+              </div>
+              <div class="modal-body">
+                Recipe and description ...
+              </div>
+              <div class="modal-footer">
+                Reviews...
+              </div>
+            </div>
+          </div>
+        </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
