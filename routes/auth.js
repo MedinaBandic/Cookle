@@ -21,15 +21,18 @@ router.get('/login', function(req, res){
 
 router.post('/login', function(req, res){
 	var cookie = req.cookies.token;
+	console.log('hepek');
 
 	model.User.findOne({email: req.body.email}, function(err, data) {
 		if (err) {
+			console.log('BIO JE ERROR');
 			console.log(err);
+			res.redirect('/');
 		} else {
 			if (data) {
-				bcrypt.compare(req.body.password, data.password, function(err, dt) {
-					if (dt) {
-						console.log("Credentials are valid");
+				// bcrypt.compare(req.body.password, data.password, function(err, dt) {
+				// 	if (dt) {
+				if (req.body.password === data.password) {
 						if (cookie === undefined) {
 							// set new cookie (just anything for now)
 						    var randomNumber = Math.random().toString();
@@ -43,8 +46,11 @@ router.post('/login', function(req, res){
 							// maybe we should remove token
 							res.redirect('/');
 						}
+					} else {
+						console.log('Credentials are invalid');
+						res.redirect('login');
 					}
-				});
+				// });
 			} else {
 				res.redirect('login');
 			}
@@ -60,7 +66,8 @@ router.get('/signup', function(req, res){
 router.post('/signup', function(req, res){
 	bcrypt.genSalt(saltRounds, function(err, salt) {
 	    bcrypt.hash(req.body.password, salt, function(err, hash) {
-        var cookle = new model.User({ guid: uuid(), email: req.body.email, password: hash, username: req.body.username, phone: req.body.phone });
+				/// NOTE: USER'S PASSWORD IS SAVED WITHOUT BCRYPT
+        var cookle = new model.User({ guid: uuid(), email: req.body.email, password: req.body.password, username: req.body.username, phone: req.body.phone });
 				cookle.save(function (err, data) {
 				  if (err) {
 				    console.log(err);
