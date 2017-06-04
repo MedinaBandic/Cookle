@@ -1,0 +1,36 @@
+<section id="contact" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="header-h">Login</h1>
+            </div>
+        </div>
+        <div class="row msg-row">
+            <div class="col-md-12 col-sm-12">
+                <div id="sendmessage">Your credentials are valid</div>
+                <div id="errormessage"></div>
+                <div class="col-md-6 col-sm-6 contact-form pad-form">
+                    <div class="form-group">
+                        <input type="username" class="form-control label-floating is-empty" name="username" id="username" ng-model="loginData.username"
+                               placeholder="Your Email" data-rule="username" data-msg="Please enter a valid username"/>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 contact-form">
+                    <div class="form-group">
+                        <input type="password" class="form-control label-floating is-empty" name="password" ng-model="loginData.password"
+                               id="password" placeholder="Password" data-rule="required"
+                               data-msg="This field is required"/>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 btnpad">
+                    <div class="contacts-btn-pad">
+                        <button class="contacts-btn" ng-click="login()">Login</button>
+                        <button class="contacts-btn" ui-sref="signup">Create account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

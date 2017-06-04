@@ -1,0 +1,52 @@
+<section id="contact" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="header-h">Create account</h1>
+            </div>
+        </div>
+        <div class="row msg-row">
+            <div class="col-md-12 col-sm-12">
+                <div ng-if="error.status">{{error.message}}</div>
+                <div id="errormessage"></div>
+                <div class="col-md-6 col-sm-6 contact-form pad-form">
+                    <div class="form-group">
+                        <input type="email" class="form-control label-floating is-empty" name="email" id="email" ng-model="signupData.email"
+                               placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"/>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control label-floating is-empty" name="username" ng-model="signupData.username"
+                               id="username" placeholder="Username" data-rule="required"
+                               data-msg="This field is required"/>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 contact-form">
+                    <div class="form-group">
+                        <input type="password" class="form-control label-floating is-empty" name="password" ng-model="signupData.password"
+                               id="password" placeholder="Password" data-rule="required"
+                               data-msg="This field is required"/>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 contact-form">
+                    <div class="form-group">
+                        <input type="password" class="form-control label-floating is-empty" name="password" ng-model="signupData.passwordRepeat"
+                               id="password" placeholder="Repeat password" data-rule="required"
+                               data-msg="This field is required"/>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 btnpad">
+                    <div class="contacts-btn-pad">
+                        <button class="contacts-btn" ng-click="signup()">Signup</button>
+                        <button class="contacts-btn" ui-sref="login">Have account?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

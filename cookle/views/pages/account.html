@@ -1,0 +1,42 @@
+<section id="contact" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="header-h">Update account</h1>
+            </div>
+        </div>
+        <div class="row msg-row">
+            <div class="col-md-12 col-sm-12">
+                <form action="" method="post" role="form" class="contactForm">
+                    <div id="sendmessage">Your are missing something</div>
+                    <div id="errormessage"></div>
+                    <div class="col-md-6 col-sm-6 contact-form pad-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control label-floating is-empty" name="title" id="username"
+                                   placeholder="Username" data-rule="required" data-msg="Please enter title"
+                                   value="{{username}}"/>
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control label-floating is-empty" name="oldpass" ng-model="accountData.oldPass"
+                                   id="oldpass" placeholder="Old password" data-rule="required"
+                                   data-msg="Please enter old password"/>
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control label-floating is-empty" name="newpass" ng-model="accountData.newPass"
+                                   id="newpass" placeholder="New password" data-rule="required"
+                                   data-msg="Please enter new password"/>
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 btnpad">
+                        <div class="contacts-btn-pad">
+                            <button class="contacts-btn">Update account</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

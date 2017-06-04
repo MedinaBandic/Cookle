@@ -1,0 +1,357 @@
+<script>
+//    var $container = $('#container-test'),
+//        $checkboxes = $('#filters-test input');
+//
+//    $container.isotope({
+//        itemSelector: '.item-test'
+//    });
+//
+//    $checkboxes.change(function(){
+//        var filters = [];
+//        // get checked checkboxes values
+//        $checkboxes.filter(':checked').each(function(){
+//            filters.push( this.value );
+//        });
+//        // ['.red', '.blue'] -> '.red, .blue'
+//        filters = filters.join(', ');
+//        $container.isotope({ filter: filters });
+//    });
+//
+//    $('#shuffle').on('click', function(){
+//        $container.isotope('shuffle');
+//    });
+//
+//    var $items = $container.children();
+//
+//    $items.click( function() {
+//        $(this).toggleClass('large');
+//        $container.isotope('reLayout');
+//    });
+
+//$(function(){
+//    $('#MixItUp1').mixItUp({
+//        selectors: {
+//            filter: '.filter',
+//            sort: '.sort'
+//        }
+//    });
+//
+//    $('#dinner').trigger('click');
+//    setTimeout(function () {
+//        $('#justClick').trigger('click');
+//    }, 100)
+//});
+
+</script>
+
+<!--banner-->
+<section id="banner">
+    <div class="bg-color">
+        <div class="container">
+            <div class="row">
+                <div class="inner text-center">
+                    <h1 class="logo-name">Cookle</h1>
+                    <h2>Become your own chef!</h2>
+                    <p>Over 100 ideas and recipes!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / banner -->
+<!--about-->
+<section id="about" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center marb-35">
+                <h1 class="header-h">Start The Delicious Journey</h1>
+
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="col-md-6 col-sm-6">
+                    <div class="about-info">
+                        <h2 class="heading">Cookle your own meal!</h2>
+                        <p>You are sick of the unhealthy food bought outside? You need idea for the lunch today? You
+                            don't know how to cook? Cookle is the perfect place for you! Here you can find everything
+                            you need including:</p>
+                        <div class="details-list">
+                            <ul>
+                                <li><i class="fa fa-check"></i>Suggestions of the perfect meals for you based on
+                                    categories, ingredients and your own wishes
+                                </li>
+                                <li><i class="fa fa-check"></i>Hundreds of ideas and recipes</li>
+                                <li><i class="fa fa-check"></i>Rating and reviews</li>
+                                <li><i class="fa fa-check"></i>Food order and delivery</li>
+                                <li><i class="fa fa-check"></i>And much more...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <img src="./public/img/res01.jpg" alt="" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</section>
+<!--/about-->
+<!-- event -->
+<section id="event">
+    <div class="bg-color" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center" style="padding:60px;">
+                    <h1 class="header-h">Recipe of the day</h1>
+                </div>
+                <div class="col-md-12" style="padding-bottom:60px;">
+                    <div class="item active left">
+                        <div class="col-md-6 col-sm-6 left-images">
+                            <img src="./public/img/res02.jpg" class="img-responsive">
+                        </div>
+                        <div class="col-md-6 col-sm-6 details-text">
+                            <div class="content-holder">
+                                <h2>Joyful party</h2>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eos suscipit earum
+                                    voluptas aliquam recusandae, quae iure adipisci, inventore quia, quos delectus
+                                    quaerat praesentium id expedita nihil illo accusantium, tempora.</p>
+
+                                <a class="btn btn-imfo btn-read-more" data-toggle="collapse" data-target="#demo">Read
+                                    more</a>
+                                <div id="demo" class="collapse">
+                                    <h3>Recipe</h3>
+                                    <div class="details-list">
+                                        <ul>
+                                            <li><i class="fa fa-check"></i>Ingredient 1</li>
+                                            <li><i class="fa fa-check"></i>Ingredient 2</li>
+                                            <li><i class="fa fa-check"></i>Ingredient 3</li>
+                                            <li><i class="fa fa-check"></i>Ingredient 4</li>
+                                            <li><i class="fa fa-check"></i>Ingredient 5</li>
+                                        </ul>
+                                    </div>
+                                    <h3>How to make?</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eos suscipit
+                                        earum voluptas aliquam recusandae, quae iure adipisci, inventore quia, quos
+                                        delectus quaerat praesentium id expedita nihil illo accusantium, tempora.</p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ event -->
+<!-- menu -->
+<section id="menu-list" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center marb-35">
+                <h1 class="header-h">Cookle the perfect recipe</h1>
+                <p class="header-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                    <br>nibh euismod tincidunt ut laoreet dolore magna aliquam. </p>
+            </div>
+            <div class="col-md-12  text-center gallery-trigger">
+                <ul class="controls">
+                    <li><a class="filter active" data-filter="all" data-sort="random" id="justClick">Show all</a></li>
+                    <li><a class="sort" data-sort="default:asc">Most popular</a></li>
+                    <li><a class="filter" data-filter=".breakfast">Breakfast</a></li>
+                    <li><a class="filter" data-filter=".launch">Lunch</a></li>
+                    <li><a class="filter" data-filter=".dinner" id="dinner">Dinner</a></li>
+                    <li><a class="filter" data-filter=".snack">Snack</a></li>
+                    <li><a class="filter" data-filter=".dessert">Dessert</a></li>
+                    <li><a class="filter" data-filter=".barbecue">Barbecue</a></li>
+                    <li><a class="filter" data-filter=".vegetarian">Vegetarian</a></li>
+                </ul>
+
+                <div class="controls">
+
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <div id="MixItUp1" class="container fix-container">
+                        <div ng-repeat="recipe in recipes" data-myorder="{{data.rating}}" class="mix {{recipe.category}} col-sm-6 col-md-4">
+                            <div class="thumbnail" data-myorder="2">
+                                <img class="thumbnail-img" ng-if="!recipe.image" src="./public/img/res01.jpg" alt="">
+                                <img class="thumbnail-img" ng-if="recipe.image" ng-src="{{recipe.image}}" alt="">
+                                <div class="caption">
+                                    <h3>{{recipe.title}}</h3>
+                                    <a class="btn btn-primary" ui-sref="details({ guid: recipe.guid })">Read more</a>
+                                    <a class="btn btn-primary" ui-sref="recipe" data-toggle="modal" data-target="#updateRecipeModal" ng-click="recipeUpdate(recipe)">Edit</a>
+                                    <a class="btn btn-warning" ng-click="removeRecipe(recipe.guid)">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="gap"></div>-->
+                        <!--<div class="gap"></div>-->
+                    </div>
+                </div>
+                <div class="row">
+                    <a class="btn btn-primary" role="button" data-toggle="modal" data-target="#addRecipeModal">Add new
+                        recipe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ menu -->
+
+<div class="modal fade" id="addRecipeModal" tabindex="-1" role="dialog" aria-labelledby="addRecipeModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="addRecipeModalLabel">Create new recipe</h4>
+            </div>
+            <div class="modal-body">
+                <section id="contact" class="section-padding">
+                    <div class="container">
+                        <div class="row msg-row">
+                            <div class="col-md-12 col-sm-12">
+                                <div id="sendmessage">Your recipe is missing something</div>
+                                <div id="errormessage"></div>
+                                <div class="col-md-6 col-sm-6 contact-form pad-form">
+                                    <div class="form-group">
+                                        <input type="text"
+                                               class="form-control label-floating is-empty" name="title" ng-model="addRecipeData.title"
+                                               placeholder="Title" data-rule="required"
+                                               data-msg="Please enter title"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control label-floating is-empty" ng-model="addRecipeData.description"
+                                               name="description" placeholder="Description"
+                                               data-rule="required" data-msg="Please enter description"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control label-floating is-empty" ng-model="addRecipeData.ingredients"
+                                               name="ingredients" placeholder="Ingridients"
+                                               data-rule="required" data-msg="This field is required"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <!--<input type="text" class="form-control label-floating is-empty" ng-model="addRecipeData.category"-->
+                                               <!--name="category" placeholder="Category"-->
+                                               <!--data-rule="required" data-msg="This field is required"/>-->
+                                        <!--<div class="validation"></div>-->
+                                        <select ng-model="addRecipeData.category" ng-options="category for category in categories">
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control label-floating is-empty" ng-model="addRecipeData.image"
+                                               name="image" placeholder="Image link"
+                                               data-rule="required" data-msg="This field is required"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control label-floating is-empty" ng-model="addRecipeData.video"
+                                               name="video" placeholder="Video Link"
+                                               data-rule="required" data-msg="This field is required"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 btnpad">
+                                    <div class="contacts-btn-pad">
+                                        <button class="contacts-btn" ng-click="addRecipe()">Create</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="updateRecipeModal" tabindex="-1" role="dialog" aria-labelledby="updateRecipeModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Update recipe</h4>
+            </div>
+            <div class="modal-body">
+                <section id="updateRecipe" class="section-padding">
+                    <div class="container">
+                        <div class="row msg-row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="col-md-6 col-sm-6 contact-form pad-form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control label-floating is-empty" name="title" ng-model="updateRecipeData.title"
+                                               placeholder="Title" data-rule="required"
+                                               data-msg="Please enter title" value="<%= recipe.title %>"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control label-floating is-empty" name="description" ng-model="updateRecipeData.description"
+                                               placeholder="Description" data-rule="required"
+                                               data-msg="Please enter description" value="<%= recipe.description %>"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control label-floating is-empty" name="ingridients" ng-model="updateRecipeData.ingredients"
+                                               placeholder="Ingredients" data-rule="required"
+                                               data-msg="This field is required" value="<%= recipe.ingridients %>"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control label-floating is-empty" name="image" ng-model="updateRecipeData.image"
+                                               placeholder="Image link" data-rule="required"
+                                               data-msg="This field is required" value="<%= recipe.ingridients %>"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control label-floating is-empty" name="video" ng-model="updateRecipeData.video"
+                                               placeholder="Video link" data-rule="required"
+                                               data-msg="This field is required" value="<%= recipe.ingridients %>"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 btnpad">
+                                    <div class="contacts-btn-pad">
+                                        <button class="contacts-btn" ng-click="updateRecipe(updateRecipeData.guid)">Update recipe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteRecipeModal" tabindex="-1" role="dialog" aria-labelledby="deleteRecipeModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Update recipe</h4>
+            </div>
+            <div class="modal-body">
+                <section id="deleteeRecipe" class="section-padding">
+                    <div class="container">
+                        <div class="row msg-row">
+                            <div class="col-md-12 col-sm-12">
+                                <button class="btn btn-warning" ng-click="removeRecipeConfirm()">Yes</button>
+                                <button class="btn btn-default" type="button" data-dismiss="modal" aria-label="Close">No</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
