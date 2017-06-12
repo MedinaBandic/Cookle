@@ -94,8 +94,13 @@ table {
 }
 .menu-button {
 	position: fixed;
-	z-index: 1000000;
+	z-index: 2;
 	right: 381px;
+}
+@media (max-width: 800px) {
+    .menu-button {
+        right: 50px;
+    }
 }
 .menu-icon
 {
@@ -397,7 +402,6 @@ table {
     width: 100%;
     background-color: #222;
     position: relative;
-    z-index: 1;
 }
 .footer a {
     color: #fff;
@@ -546,4 +550,10 @@ table {
     content: '';
     display: inline-block;
     /*padding-top: 60%;*/
+}
+
+/*filters / sort*/
+.controls {
+    margin: 0;
+    padding: 0;
 }

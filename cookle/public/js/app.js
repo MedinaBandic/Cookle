@@ -6,7 +6,7 @@ if (prod) {
     api = 'http://80.65.165.60:3001'
 }
 
-app.config(function ($stateProvider) {
+app.config(function ($stateProvider, $locationProvider) {
     var main = {
         name: 'main',
         url: '/',
@@ -66,6 +66,8 @@ app.config(function ($stateProvider) {
         templateUrl: '../../views/pages/account.html'
     }
 
+    $locationProvider.html5Mode(true);
+
     $stateProvider.state(main);
     $stateProvider.state(login);
     $stateProvider.state(signup);
@@ -82,30 +84,32 @@ app.filter("trustUrl", ['$sce', function ($sce) {
 app.controller('mainCtrl', function ($scope, $http, $cookies, $state, $timeout) {
 
     $scope.addRecipeData = {};
-    $scope.categories = ['dinner','launch','snack']
+    $scope.categories = ['breakfast', 'lunch', 'dinner','snack', 'dessert', 'barbeque', 'vegetarian']
 
-
-    $('#MixItUp1').mixItUp({
-        selectors: {
-            filter: '.filter',
-            sort: '.sort'
-        }
-    });
-
-
-    $('#dinner').trigger('click');
-    setTimeout(function () {
-        console.log("OK here we are")
-        $('#justClick').trigger('click');
-    }, 100)
+    // $('#dinner').trigger('click');
+    // setTimeout(function () {
+    //     console.log("OK here we are")
+    //     $('#justClick').trigger('click');
+    // }, 100)
 
     $scope.recipesGet = function () {
         console.log("GET");
         $http({
             method: 'GET',
+            headers: {
+                "Authorization": "Bearer " + $cookies.get('token'),
+            },
             url: api + '/api/v1/recipe'
         }).then(function (res) {
             $scope.recipes = res.data.data;
+            $timeout(function () {
+                 $('#MixItUp1').mixItUp({
+                   selectors: {
+                       filter: '.filter',
+                       sort: '.sort'
+                   }
+                });
+            }, 500)
         }, function (err) {
             console.log(err);
         });
@@ -121,6 +125,9 @@ app.controller('mainCtrl', function ($scope, $http, $cookies, $state, $timeout) 
     $scope.removeRecipeConfirm = function () {
         $http({
             method: 'DELETE',
+            headers: {
+                "Authorization": "Bearer " + $cookies.get('token'),
+            },
             url: api + '/api/v1/recipe/' + $scope.removeRecipeGuid
         }).then(function (res) {
             $scope.recipesGet();
@@ -135,6 +142,9 @@ app.controller('mainCtrl', function ($scope, $http, $cookies, $state, $timeout) 
         $http({
             method: 'POST',
             data: $scope.addRecipeData,
+            headers: {
+                "Authorization": "Bearer " + $cookies.get('token'),
+            },
             url: api + '/api/v1/recipe'
         }).then(function (res) {
             console.log(res);
@@ -152,6 +162,9 @@ app.controller('mainCtrl', function ($scope, $http, $cookies, $state, $timeout) 
         $http({
             method: 'PUT',
             data: $scope.updateRecipeData,
+            headers: {
+                "Authorization": "Bearer " + $cookies.get('token'),
+            },
             url: api + '/api/v1/recipe/' + $scope.updateRecipeData.guid
         }).then(function (res) {
             $scope.recipesGet();
@@ -169,6 +182,9 @@ app.controller('detailsCtrl', function ($scope, $stateParams, $http, $cookies) {
 
     $http({
         method: 'GET',
+        headers: {
+            "Authorization": "Bearer " + $cookies.get('token'),
+        },
         url: api + '/api/v1/recipe/' + $stateParams.guid
     }).then(function (res) {
         console.log(res);
@@ -190,10 +206,14 @@ app.controller('detailsCtrl', function ($scope, $stateParams, $http, $cookies) {
                   user: $scope.reviewData.user,
                   rating: $scope.rating
               },
+              headers: {
+                  "Authorization": "Bearer " + $cookies.get('token'),
+              },
               url: api + '/api/v1/recipe/' + $stateParams.guid + '/review'
           }).then(function (res) {
               $scope.recipe = res.data.data;
               $scope.reviewData = {};
+              $scope.rating = 0;
           }, function (err) {
               console.log(err);
           });
@@ -266,6 +286,9 @@ app.controller('accountCtrl', function ($scope, $http, $cookies, $state) {
                 oldPass: $scope.accountData.oldPass,
                 newPass: $scope.accountData.newPass
             },
+            headers: {
+                "Authorization": "Bearer " + $cookies.get('token'),
+            },
             url: api + '/api/v1/user/'
         }).then(function (res) {
             if (res.status === 200) {
@@ -277,7 +300,7 @@ app.controller('accountCtrl', function ($scope, $http, $cookies, $state) {
     }
 })
 
-app.controller('headerCtrl', function ($scope, $cookies) {
+app.controller('headerCtrl', function ($scope, $cookies, $state) {
     $scope.username = $cookies.get('username');
 
     $scope.logout = function () {

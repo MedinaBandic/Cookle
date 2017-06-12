@@ -98,6 +98,7 @@ router.put('/recipe/:guid/review', function(req, res) {
             }
         })
         total += req.body.rating;
+        rated++;
         total = total / rated;
 
         model.Recipe.findOneAndUpdate({ guid: req.params.guid }, {
