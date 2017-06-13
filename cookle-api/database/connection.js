@@ -2,10 +2,10 @@ var mongoose = require('mongoose');
 var connection;
 
 console.log("API: ", process.env.COOKLE);
-if (true) {
+if (false) {
     connection = mongoose.connect('mongodb://localhost/cookle');
 } else {
-    connection = mongoose.connect('mongodb://cookle.club:YFczdFKCqzL4bE@80.65.165.60:2721/cookleclub', {auth:{authdb:"admin"}})
+    connection = mongoose.connect('mongodb://cookle.club:YFczdFKCqzL4bE@localhost:2721/cookleclub', {auth:{authdb:"admin"}})
 }
 
 module.exports = connection;

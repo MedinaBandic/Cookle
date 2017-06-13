@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 
 app.use('/', express.static(path.join(__dirname, '../cookle')));
 
-app.use(jwt({secret: publicKey}).unless({path: ['/api/v1/login', '/api/v1/signup']}));
+app.use(jwt({secret: publicKey}).unless({path: ['/login', '/signup']}));
 
 var auth = require('./routes/auth');
 var recipe = require('./routes/recipe');
@@ -27,6 +27,6 @@ app.use('/api/v1/', auth);
 app.use('/api/v1/', recipe);
 
 
-app.listen(3001, function () {
-    console.log('Example app listening on port 3000!')
+app.listen(3004, function () {
+    console.log('Example app listening on port 3004!')
 });
