@@ -16,9 +16,9 @@ app.use(function(req, res, next) {
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-app.use('/', express.static(path.join(__dirname, '../cookle')));
+app.use('/', express.static(path.join(__dirname, '../Cookle')));
 
-app.use(jwt({secret: publicKey}).unless({path: ['/login', '/signup']}));
+app.use(jwt({secret: publicKey}).unless({path: ['/api/v1/login', '/api/v1/signup']}));
 
 var auth = require('./routes/auth');
 var recipe = require('./routes/recipe');

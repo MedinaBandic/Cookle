@@ -159,8 +159,9 @@
             </div>
             <div class="col-md-12  text-center gallery-trigger">
                 <ul class="controls">
-                    <li><a class="filter active" data-filter="all" data-sort="random" id="justClick">Show all</a></li>
-                    <li><a class="sort" data-sort="default:asc">Most popular</a></li>
+                    <li><a class="filter active" data-filter="all" id="justClick">Show all</a></li>
+                    <li><a class="sort active" data-sort="rating:desc">Sort by rating</a></li>
+                    <li><a class="sort" data-sort="name:asc">Sort by name</a></li>
                     <li><a class="filter" data-filter=".breakfast">Breakfast</a></li>
                     <li><a class="filter" data-filter=".lunch">Lunch</a></li>
                     <li><a class="filter" data-filter=".dinner" id="dinner">Dinner</a></li>
@@ -177,7 +178,7 @@
             <div>
                 <div class="row">
                     <div id="MixItUp1" class="container fix-container">
-                        <div ng-repeat="recipe in recipes" data-myorder="{{data.rating}}" class="mix {{recipe.category}} col-sm-6 col-md-4">
+                        <div ng-repeat="recipe in recipes" class="mix {{recipe.category}} col-sm-6 col-md-4"  data-rating="{{recipe.rating}}" data-name="{{recipe.title}}">
                             <div class="thumbnail" data-myorder="2">
                                 <img class="thumbnail-img" ng-if="!recipe.image" src="./public/img/res01.jpg" alt="">
                                 <img class="thumbnail-img" ng-if="recipe.image" ng-src="{{recipe.image}}" alt="">
@@ -339,7 +340,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title">Update recipe</h4>
+                <h4 class="modal-title">Delete recipe</h4>
             </div>
             <div class="modal-body">
                 <section id="deleteeRecipe" class="section-padding">

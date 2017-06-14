@@ -1,24 +1,11 @@
 var app = angular.module('app', ['ui.router', 'ngCookies', 'star-rating']);
-var api = 'http://localhost:3001';
-
-var prod = false;
-if (prod) {
-    api = 'http://80.65.165.60:3001'
-}
+var api = '';
 
 app.config(function ($stateProvider, $locationProvider) {
     var main = {
         name: 'main',
         url: '/',
         controller: 'mainCtrl',
-        resolve: {
-            security: ['$cookies', '$state', function($cookies, $state){
-                console.log($cookies.get('username'));
-                if ($cookies.get('username') === undefined){
-                    $state.transitionTo('login');
-                }
-            }]
-        },
         templateUrl: '../../views/pages/main.html'
     }
 
@@ -101,19 +88,27 @@ app.controller('mainCtrl', function ($scope, $http, $cookies, $state, $timeout) 
             },
             url: api + '/api/v1/recipe'
         }).then(function (res) {
+            try {
+              $('#MixItUp1').mixItUp('destroy');
+            } catch(e) {
+              console.warn('Coudln\'t destroy mixitup');
+            }
             $scope.recipes = res.data.data;
-            $timeout(function () {
-                 $('#MixItUp1').mixItUp({
-                   selectors: {
-                       filter: '.filter',
-                       sort: '.sort'
-                   }
-                });
-            }, 500)
+            $timeout(function() {
+              $('#MixItUp1').mixItUp({
+                selectors: {
+                    filter: '.filter',
+                    sort: '.sort'
+                 }
+              });
+            }, 500);
         }, function (err) {
             console.log(err);
         });
     }
+    $scope.$on("$destroy", function() {
+      $('#MixItUp1').mixItUp('destroy');
+    });
     $scope.recipesGet();
 
     $scope.removeRecipeGuid = "";
@@ -203,7 +198,7 @@ app.controller('detailsCtrl', function ($scope, $stateParams, $http, $cookies) {
               method: 'PUT',
               data: {
                   review: $scope.reviewData.review,
-                  user: $scope.reviewData.user,
+                  user: $cookies.get('username'),
                   rating: $scope.rating
               },
               headers: {
@@ -220,7 +215,7 @@ app.controller('detailsCtrl', function ($scope, $stateParams, $http, $cookies) {
       } else {
           $scope.error = {
               status: true,
-              message: "Username or Review are not entered"
+              message: "Review is not entered"
           }
       }
     }
@@ -238,7 +233,7 @@ app.controller('loginCtrl', function ($scope, $http, $cookies, $state) {
                 console.log(res);
                 $cookies.put('username', res.data.data.username);
                 $cookies.put('token', res.data.token);
-                $state.transitionTo('main');
+                window.location.replace('/');
             }
         }, function (err) {
             console.log(err);
